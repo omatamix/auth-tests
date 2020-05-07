@@ -54,7 +54,7 @@ class RegisterTest extends TestCase
     {
         Event::fake();
 
-        $response = $this->post($this->registerPostRoute(), [
+        $response = $this->from($this->registerGetRoute())->post($this->registerPostRoute(), [
             'name' => 'John Doe',
             'email' => 'john@example.com',
             'password' => 'i-love-laravel',
